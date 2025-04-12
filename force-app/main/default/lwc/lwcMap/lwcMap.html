@@ -1,0 +1,10 @@
+<template>
+    <template lwc:if={mapMarkers}>
+        <lightning-map map-markers={mapMarkers} show-footer> </lightning-map>
+    </template>
+    <template lwc:else>
+        <lightning-card>
+            <p>Map data not loaded</p>
+        </lightning-card>
+    </template>
+</template>

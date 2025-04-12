@@ -1,0 +1,31 @@
+<template>
+    <div class="cardCenter">
+        <div class="custom-card">
+            <lightning-input class="labelStoreId" label="Enter Store Id" onchange={handleIdChange}></lightning-input>
+            <lightning-button class="inputBox" label="Search StoreId" onclick={handleSearchData}></lightning-button>
+
+            <template if:true={data}>
+                <pre>{storeDetails}</pre>
+            </template>
+                <div class="store-map">
+                    <div class="store-map-inner"></div> <!-- Only one instance -->
+                </div>
+                <c-model-popup></c-model-popup>
+            <template if:true={error}>
+                <p>Error: {error}</p>
+            </template>
+            <!-- Button group: simple buttons -->
+
+            <lightning-input class="pingEinstein" label="ping to Einstein"></lightning-input>
+            <lightning-button label="send to Einstein" onclick={handleProductJson}></lightning-button>
+
+
+        <lightning-button-group>
+            <lightning-button label="Refresh"></lightning-button>
+            
+            <lightning-button label="Edit"></lightning-button>
+            <lightning-button label="Save"></lightning-button>
+        </lightning-button-group>
+        </div>
+    </div>
+</template>

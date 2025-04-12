@@ -1,0 +1,16 @@
+<template>
+
+    <lightning-card title="Einstein, The Prompt Engineer" icon-name="custom:custom14">
+        <div class="slds-m-around_medium">
+            <lightning-input class="tell_AE" label="System Prompt" value={system_prompt} onchange={handleSystemPromptChange}>
+                ></lightning-input>
+            <br/>
+            <lightning-input class="askAE"  label="User Prompt" value={subMsg} onchange={handleUserPromptChange}>
+                ></lightning-input>
+            <br/>
+            <lightning-button variant="brand" label="Generate" title="Generate response" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+            <br/><br/>
+            <lightning-textarea label="Response" value={response} readonly> </lightning-textarea>
+        </div>
+    </lightning-card>
+</template>

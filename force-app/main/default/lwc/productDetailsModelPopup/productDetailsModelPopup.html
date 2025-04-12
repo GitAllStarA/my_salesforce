@@ -1,0 +1,25 @@
+<template>
+    <template if:true={isShowModal}>
+        <lightning-card  title="Hello">
+            <lightning-button label="New" slot="actions"></lightning-button>
+            <p class="slds-p-horizontal_small">Card Body (custom component)</p>
+            <div class="modal-overlay">
+                <div class="modal-container">
+        
+        
+        
+                  <button class="modal-close-btn" onclick={handleDialogClose}>×</button>
+          
+                  <img src={selectedProductRow.imageUrl} alt={selectedProductRow.name} style="max-height: 150px;" />
+                  <h2>{selectedProductRow.name}</h2>
+                  <p>{selectedProductRow.brand} - {selectedProductRow.category}</p>
+                  <p><strong>${selectedProductRow.price}</strong></p>
+                  <p>In stock: {selectedProductRow.stockCount}</p>
+                </div>
+              </div>
+            <p slot="footer">Card Footer</p>
+        </lightning-card>
+      
+    </template>
+  </template>
+  

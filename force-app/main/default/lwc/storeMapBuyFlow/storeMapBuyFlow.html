@@ -1,0 +1,13 @@
+<template>
+    <lightning-card>
+        <!-- <lightning-button variant="base" label="flow activate" onclick={handleClick}></lightning-button> -->
+        <lightning-flow class="lfsm" if:true={isFlowRendered}
+                flow-api-name={flowApiName}
+                flow-input-variables={flowInputVariables}
+            onstatuschange={handleFlowStatusChange}></lightning-flow>
+        <template if:false={isFlowRendered}>
+            <lightning-formatted-text value="No account Id found"></lightning-formatted-text>
+        </template>
+    </lightning-card>
+    
+</template>

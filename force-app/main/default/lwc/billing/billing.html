@@ -1,0 +1,18 @@
+<template>
+    <template if:true={billingPeripherals}>
+        <lightning-card variant="Narrow" title="welcome to store peripherals dashboard" icon-name="standard:account">
+            <lightning-button-icon icon-name="utility:down" variant="border-filled" alternative-text="Show More"
+                slot="actions"></lightning-button-icon>
+            <p class="slds-p-horizontal_small">Store Peripherals Status</p>
+            <div>
+                <lightning-datatable 
+                            key-field="id"
+                            data={billingPeripherals}
+                            columns={columns}
+                            >
+                </lightning-datatable>
+            </div>   
+            <p slot="footer">Store Peripherals</p>
+        </lightning-card>
+    </template>
+</template>

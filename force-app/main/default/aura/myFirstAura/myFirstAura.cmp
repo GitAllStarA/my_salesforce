@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <lightning:card title="My First Aura Component" iconName="custom:custom14">
+    </lightning:card>
+    <c:lwcForAura aura:id="lwcForAura" name="iphone"/>
+
+    <lightning:button 
+            label="Neutral"
+            title="Neutral action" 
+            onclick="{! c.myAction }"/>
+
+</aura:component>
